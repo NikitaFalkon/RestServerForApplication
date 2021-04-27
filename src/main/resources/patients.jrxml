@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Patienti" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="e115bc59-fd0f-446b-a585-04725e27d7f0">
+    <style name="Title" fontName="Arial" fontSize="26" isBold="true"/>
+    <style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+    <style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+    <style name="Detail" fontName="Arial" fontSize="12"/>
+    <field name="id" class="java.lang.Long">
+    </field>
+    <field name="name" class="java.lang.String">
+    </field>
+    <field name="surname" class="java.lang.String">
+    </field>
+    <field name="age" class="java.lang.String">
+    </field>
+    <field name="sex" class="java.lang.String">
+    </field>
+    <field name="erythrocytes" class="java.lang.Double">
+    </field>
+    <field name="platelets" class="java.lang.Integer">
+    </field>
+    <field name="leukocytes" class="java.lang.Double">
+    </field>
+    <field name="hemoglobin" class="java.lang.Integer">
+    </field>
+    <background>
+        <band/>
+    </background>
+    <title>
+        <band height="104" splitType="Stretch">
+            <staticText>
+                <reportElement style="Title" x="0" y="0" width="802" height="67" uuid="1dcadd54-7d50-4470-85ed-189e4d910b25"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font size="54" isBold="false"/>
+                </textElement>
+                <text><![CDATA[WAVES TITLE]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="SubTitle" x="232" y="67" width="568" height="37" uuid="862cb50c-5a5e-4906-a495-226e25115fb6"/>
+                <textElement textAlignment="Right">
+                    <font size="26"/>
+                </textElement>
+                <text><![CDATA[Parameters]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="25" splitType="Stretch">
+            <frame>
+                <reportElement mode="Opaque" x="97" y="5" width="705" height="20" backcolor="#666666" uuid="35d90a9b-bb7e-4ec4-bfa2-68be1967d6b2"/>
+                <staticText>
+                    <reportElement style="Column header" x="0" y="0" width="78" height="15" uuid="d919d854-589e-4e18-b72d-d09f7bd566f6">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4f9860ca-cdda-4972-aff0-431aa67e179b"/>
+                    </reportElement>
+                    <text><![CDATA[Id]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement style="Column header" x="78" y="0" width="78" height="15" uuid="f7fe4c79-ba7c-4400-baca-91fec990bf07">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7bd66644-1074-45c7-9047-fdd3aabebf47"/>
+                    </reportElement>
+                    <text><![CDATA[Name]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement style="Column header" x="156" y="0" width="78" height="15" uuid="ad6fcaf9-8315-471c-a4d0-3a0b3e548ef3">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5a692f2c-f796-49e8-b228-ac1d2bdd8cc3"/>
+                    </reportElement>
+                    <text><![CDATA[Surname]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement style="Column header" x="234" y="0" width="78" height="15" uuid="7547d67f-c00f-4155-97e1-7300969928d9">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="39885b80-74a8-4620-9aac-3f71db4316bc"/>
+                    </reportElement>
+                    <text><![CDATA[Sex]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement style="Column header" x="312" y="0" width="78" height="15" uuid="cb7f654f-b257-4e5a-957f-c424788d7177">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="667b01e0-8eff-4453-b756-d4eabba5b20d"/>
+                    </reportElement>
+                    <text><![CDATA[Age]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement style="Column header" x="390" y="0" width="78" height="15" uuid="39e96a77-6cba-433d-ba9b-aed640951e44">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c728311b-1c0f-40cb-8848-461089136bc4"/>
+                    </reportElement>
+                    <text><![CDATA[Erythrocytes]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement style="Column header" x="468" y="0" width="78" height="15" uuid="9a6a3c1c-a2d6-4782-9e4e-5770fd972847">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ac3d47a5-995c-4db1-81a0-0a9b5c128bd9"/>
+                    </reportElement>
+                    <text><![CDATA[Platelets]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement style="Column header" x="546" y="0" width="78" height="15" uuid="190067a5-4513-48b8-a4c4-af1436472b11">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fc0f3135-f86b-473d-9d97-b58761280857"/>
+                    </reportElement>
+                    <text><![CDATA[Leukocytes]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement style="Column header" x="624" y="0" width="78" height="15" uuid="6eea702e-ed37-4030-8a5b-0f7bb7b0e029">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e57f43b2-4d60-464f-a3ff-ca6024c0c7dc"/>
+                    </reportElement>
+                    <text><![CDATA[Hemoglobin]]></text>
+                </staticText>
+            </frame>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="21" splitType="Stretch">
+            <frame>
+                <reportElement x="97" y="1" width="705" height="15" uuid="89a3da05-fdde-4ffe-965f-cc476f72e3ab"/>
+                <textField>
+                    <reportElement style="Detail" x="0" y="0" width="78" height="15" uuid="a83d67b0-a8cb-45fa-a653-66ece9d6eda1">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4f9860ca-cdda-4972-aff0-431aa67e179b"/>
+                    </reportElement>
+                    <textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement style="Detail" x="78" y="0" width="78" height="15" uuid="56b71df3-0de6-4ee7-99eb-00c27e0b187d">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7bd66644-1074-45c7-9047-fdd3aabebf47"/>
+                    </reportElement>
+                    <textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement style="Detail" x="156" y="0" width="78" height="15" uuid="48cd60a7-5529-4752-8a2b-0eddffb81adb">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5a692f2c-f796-49e8-b228-ac1d2bdd8cc3"/>
+                    </reportElement>
+                    <textFieldExpression><![CDATA[$F{surname}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement style="Detail" x="234" y="0" width="78" height="15" uuid="e0707f09-0ebd-4ec0-937c-416f2bc45a1a">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="39885b80-74a8-4620-9aac-3f71db4316bc"/>
+                    </reportElement>
+                    <textFieldExpression><![CDATA[$F{sex}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement style="Detail" x="312" y="0" width="78" height="15" uuid="b5d78498-377a-44b6-9d58-2cb87169a976">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="667b01e0-8eff-4453-b756-d4eabba5b20d"/>
+                    </reportElement>
+                    <textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement style="Detail" x="390" y="0" width="78" height="15" uuid="c1c6310b-974f-420b-ad34-3cbeffc25206">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c728311b-1c0f-40cb-8848-461089136bc4"/>
+                    </reportElement>
+                    <textFieldExpression><![CDATA[$F{erythrocytes}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement style="Detail" x="468" y="0" width="78" height="15" uuid="8f7b9b03-3695-4eb5-baf2-315d8610073e">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ac3d47a5-995c-4db1-81a0-0a9b5c128bd9"/>
+                    </reportElement>
+                    <textFieldExpression><![CDATA[$F{platelets}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement style="Detail" x="546" y="0" width="78" height="15" uuid="e1b88e77-1c70-4a37-8cf1-7c5df576e836">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fc0f3135-f86b-473d-9d97-b58761280857"/>
+                    </reportElement>
+                    <textFieldExpression><![CDATA[$F{leukocytes}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement style="Detail" x="624" y="0" width="78" height="15" uuid="2a2b3a0c-5184-4b97-9ae6-df1dda9134a3">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e57f43b2-4d60-464f-a3ff-ca6024c0c7dc"/>
+                    </reportElement>
+                    <textFieldExpression><![CDATA[$F{hemoglobin}]]></textFieldExpression>
+                </textField>
+            </frame>
+            <line>
+                <reportElement positionType="FixRelativeToBottom" x="97" y="16" width="705" height="1" uuid="e5f21b91-7f24-498e-97a1-0e93db9225a4"/>
+                <graphicElement>
+                    <pen lineWidth="0.5" lineColor="#999999"/>
+                </graphicElement>
+            </line>
+        </band>
+    </detail>
+    <columnFooter>
+        <band splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="39" splitType="Stretch">
+            <textField pattern="EEEEE dd MMMMM yyyy">
+                <reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="95484ca0-40b4-4752-95d8-1afbc33c820b"/>
+                <textElement textAlignment="Right">
+                    <font size="12" isBold="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="96" y="0" width="267" height="20" uuid="0ec52099-dcd7-42f4-8baa-f3874f05208a"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Patients]]></text>
+            </staticText>
+        </band>
+    </pageFooter>
+    <summary>
+        <band splitType="Stretch"/>
+    </summary>
+</jasperReport>
