@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="05cc2493-fbc3-49a6-8718-b035382bef67">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+    <queryString language="SQL">
+        <![CDATA[select * from patient]]>
+    </queryString>
+    <field name="AGE" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="AGE"/>
+        <property name="com.jaspersoft.studio.field.label" value="AGE"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="ERYTHROCYTES" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="ERYTHROCYTES"/>
+        <property name="com.jaspersoft.studio.field.label" value="ERYTHROCYTES"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="HEMOGLOBIN" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.name" value="HEMOGLOBIN"/>
+        <property name="com.jaspersoft.studio.field.label" value="HEMOGLOBIN"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="LEUKOCYTES" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="LEUKOCYTES"/>
+        <property name="com.jaspersoft.studio.field.label" value="LEUKOCYTES"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="NAME" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="NAME"/>
+        <property name="com.jaspersoft.studio.field.label" value="NAME"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="PLATELETS" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.name" value="PLATELETS"/>
+        <property name="com.jaspersoft.studio.field.label" value="PLATELETS"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="SEX" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="SEX"/>
+        <property name="com.jaspersoft.studio.field.label" value="SEX"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <field name="SURNAME" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="SURNAME"/>
+        <property name="com.jaspersoft.studio.field.label" value="SURNAME"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
+        <fieldDescription><![CDATA[]]></fieldDescription>
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <summary>
+        <band height="459" splitType="Stretch">
+            <pie3DChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="70" y="50" width="440" height="350" uuid="33dba86b-c1e3-4aa6-95d3-9b30c70f448c"/>
+                    <chartTitle/>
+                    <chartSubtitle/>
+                    <chartLegend/>
+                </chart>
+                <pieDataset maxCount="10">
+                    <dataset resetType="Report"/>
+                    <keyExpression><![CDATA[$F{AGE}]]></keyExpression>
+                    <valueExpression><![CDATA[$F{ERYTHROCYTES}]]></valueExpression>
+                    <labelExpression><![CDATA[$F{AGE}]]></labelExpression>
+                </pieDataset>
+                <pie3DPlot>
+                    <plot/>
+                    <itemLabel/>
+                </pie3DPlot>
+            </pie3DChart>
+        </band>
+    </summary>
+</jasperReport>
