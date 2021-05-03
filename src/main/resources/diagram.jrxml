@@ -3,6 +3,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="05cc2493-fbc3-49a6-8718-b035382bef67">
     <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
     <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+    <property name="net.sf.jasperreports.chart.pie.ignore.duplicated.key" value="true"/>
     <queryString language="SQL">
         <![CDATA[select * from patient]]>
     </queryString>
@@ -10,49 +11,49 @@
         <property name="com.jaspersoft.studio.field.name" value="AGE"/>
         <property name="com.jaspersoft.studio.field.label" value="AGE"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
-        <fieldDescription><![CDATA[]]></fieldDescription>
+        <fieldDescription><![CDATA[age]]></fieldDescription>
     </field>
     <field name="ERYTHROCYTES" class="java.lang.Double">
         <property name="com.jaspersoft.studio.field.name" value="ERYTHROCYTES"/>
         <property name="com.jaspersoft.studio.field.label" value="ERYTHROCYTES"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
-        <fieldDescription><![CDATA[]]></fieldDescription>
+        <fieldDescription><![CDATA[erythrocytes]]></fieldDescription>
     </field>
     <field name="HEMOGLOBIN" class="java.lang.Integer">
         <property name="com.jaspersoft.studio.field.name" value="HEMOGLOBIN"/>
         <property name="com.jaspersoft.studio.field.label" value="HEMOGLOBIN"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
-        <fieldDescription><![CDATA[]]></fieldDescription>
+        <fieldDescription><![CDATA[hemoglobin]]></fieldDescription>
     </field>
     <field name="LEUKOCYTES" class="java.lang.Double">
         <property name="com.jaspersoft.studio.field.name" value="LEUKOCYTES"/>
         <property name="com.jaspersoft.studio.field.label" value="LEUKOCYTES"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
-        <fieldDescription><![CDATA[]]></fieldDescription>
+        <fieldDescription><![CDATA[leukocytes]]></fieldDescription>
     </field>
     <field name="NAME" class="java.lang.String">
         <property name="com.jaspersoft.studio.field.name" value="NAME"/>
         <property name="com.jaspersoft.studio.field.label" value="NAME"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
-        <fieldDescription><![CDATA[]]></fieldDescription>
+        <fieldDescription><![CDATA[name]]></fieldDescription>
     </field>
     <field name="PLATELETS" class="java.lang.Integer">
         <property name="com.jaspersoft.studio.field.name" value="PLATELETS"/>
         <property name="com.jaspersoft.studio.field.label" value="PLATELETS"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
-        <fieldDescription><![CDATA[]]></fieldDescription>
+        <fieldDescription><![CDATA[platelets]]></fieldDescription>
     </field>
     <field name="SEX" class="java.lang.String">
         <property name="com.jaspersoft.studio.field.name" value="SEX"/>
         <property name="com.jaspersoft.studio.field.label" value="SEX"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
-        <fieldDescription><![CDATA[]]></fieldDescription>
+        <fieldDescription><![CDATA[sex]]></fieldDescription>
     </field>
     <field name="SURNAME" class="java.lang.String">
         <property name="com.jaspersoft.studio.field.name" value="SURNAME"/>
         <property name="com.jaspersoft.studio.field.label" value="SURNAME"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="PATIENT"/>
-        <fieldDescription><![CDATA[]]></fieldDescription>
+        <fieldDescription><![CDATA[surname]]></fieldDescription>
     </field>
     <background>
         <band splitType="Stretch"/>
@@ -68,9 +69,9 @@
                 </chart>
                 <pieDataset maxCount="10">
                     <dataset resetType="Report"/>
-                    <keyExpression><![CDATA[$F{AGE}]]></keyExpression>
-                    <valueExpression><![CDATA[$F{ERYTHROCYTES}]]></valueExpression>
-                    <labelExpression><![CDATA[$F{AGE}]]></labelExpression>
+                    <keyExpression><![CDATA[$F{NAME}]]></keyExpression>
+                    <valueExpression><![CDATA[$F{PLATELETS}]]></valueExpression>
+                    <labelExpression><![CDATA[$F{NAME}]]></labelExpression>
                 </pieDataset>
                 <pie3DPlot>
                     <plot/>
