@@ -20,6 +20,14 @@ public class ReportService {
     PatientRepository patientRepository;
     public void exportReport(String reportFormat) throws FileNotFoundException, JRException {
         List<Patient> patientList = patientRepository.findAll();
+       /* if(age.isEmpty())
+        {
+            patientList = patientRepository.findAllBySex(age);
+        }
+        else
+        {
+            patientList = patientRepository.findAllByAge(sex);
+        }*/
         File file = ResourceUtils.getFile("classpath:diagram.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
         JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(patientList);

@@ -4,9 +4,9 @@
     <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
     <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
     <property name="net.sf.jasperreports.chart.pie.ignore.duplicated.key" value="true"/>
-    <queryString language="SQL">
-        <![CDATA[select * from patient]]>
-    </queryString>
+    <!--<queryString language="H2">
+        <![CDATA[select * from patient where SEX='Man' and AGE='Child']]>
+    </queryString>-->
     <field name="AGE" class="java.lang.String">
         <property name="com.jaspersoft.studio.field.name" value="AGE"/>
         <property name="com.jaspersoft.studio.field.label" value="AGE"/>
@@ -59,25 +59,69 @@
         <band splitType="Stretch"/>
     </background>
     <summary>
-        <band height="459" splitType="Stretch">
-            <pie3DChart>
+        <band height="701"  splitType="Stretch">
+            <barChart>
                 <chart evaluationTime="Report">
-                    <reportElement x="70" y="50" width="440" height="350" uuid="33dba86b-c1e3-4aa6-95d3-9b30c70f448c"/>
+                    <reportElement x="1" y="1" width="500" height="700" uuid="949dd096-b461-4a8c-af1a-ae6aedf8028e"/>
                     <chartTitle/>
                     <chartSubtitle/>
                     <chartLegend/>
                 </chart>
-                <pieDataset maxCount="10">
+                <categoryDataset>
                     <dataset resetType="Report"/>
-                    <keyExpression><![CDATA[$F{NAME}]]></keyExpression>
-                    <valueExpression><![CDATA[$F{PLATELETS}]]></valueExpression>
-                    <labelExpression><![CDATA[$F{NAME}]]></labelExpression>
-                </pieDataset>
-                <pie3DPlot>
+                    <categorySeries>
+                        <seriesExpression><![CDATA[$F{NAME}]]></seriesExpression>
+                        <categoryExpression><![CDATA["PLATELETS"]]></categoryExpression>
+                        <valueExpression><![CDATA[$F{PLATELETS}]]></valueExpression>
+                    </categorySeries>
+                    <categorySeries>
+                        <seriesExpression><![CDATA[$F{NAME}]]></seriesExpression>
+                        <categoryExpression><![CDATA["HEMOGLOBIN"]]></categoryExpression>
+                        <valueExpression><![CDATA[$F{HEMOGLOBIN}]]></valueExpression>
+                    </categorySeries>
+                </categoryDataset>
+                <barPlot>
                     <plot/>
                     <itemLabel/>
-                </pie3DPlot>
-            </pie3DChart>
+                    <categoryAxisFormat>
+                        <axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+                    </categoryAxisFormat>
+                    <valueAxisFormat>
+                        <axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+                    </valueAxisFormat>
+                </barPlot>
+            </barChart>
+            <barChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="510" y="1" width="500" height="700" uuid="949dd096-b461-4a8c-af1a-ae6aedf8028e"/>
+                    <chartTitle/>
+                    <chartSubtitle/>
+                    <chartLegend/>
+                </chart>
+                <categoryDataset>
+                    <categorySeries>
+                        <seriesExpression><![CDATA[$F{NAME}]]></seriesExpression>
+                        <categoryExpression><![CDATA["ERYTHROCYTES"]]></categoryExpression>
+                        <valueExpression><![CDATA[$F{ERYTHROCYTES}]]></valueExpression>
+                    </categorySeries>
+                    <categorySeries>
+                        <seriesExpression><![CDATA[$F{NAME}]]></seriesExpression>
+                        <categoryExpression><![CDATA["LEUKOCYTES"]]></categoryExpression>
+                        <valueExpression><![CDATA[$F{LEUKOCYTES}]]></valueExpression>
+                    </categorySeries>
+                </categoryDataset>
+                <barPlot>
+                    <plot/>
+                    <itemLabel/>
+                    <categoryAxisFormat>
+                        <axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+                    </categoryAxisFormat>
+                    <valueAxisFormat>
+                        <axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+                    </valueAxisFormat>
+                </barPlot>
+            </barChart>
         </band>
     </summary>
+
 </jasperReport>

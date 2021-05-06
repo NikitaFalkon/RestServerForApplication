@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.File;
@@ -31,9 +32,13 @@ public class MyController {
     public RedirectView GenerateReport(@PathVariable String format) throws FileNotFoundException, JRException {
         return reportService.exportReport(format);
     }*/
-    @GetMapping(value = "report/{format}", produces = { MediaType.TEXT_HTML_VALUE })
-    public byte[] getPDF(@PathVariable String format) throws IOException, JRException {
-        reportService.exportReport(format);
+    @GetMapping(value = "report", produces = { MediaType.TEXT_HTML_VALUE })
+    public byte[] getPDF(
+                         /*@PathVariable String format
+                         @RequestParam(name = "sex", required = false) String sex,
+                         @RequestParam(name = "age", required = false) String age*/
+    ) throws IOException, JRException {
+        reportService.exportReport("html");
         return Files.readAllBytes(new File("C:/FilesForJava/patients.html").toPath());
     }
 
