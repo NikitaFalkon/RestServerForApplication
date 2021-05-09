@@ -4,9 +4,9 @@
     <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
     <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
     <property name="net.sf.jasperreports.chart.pie.ignore.duplicated.key" value="true"/>
-    <!--<queryString language="H2">
+    <queryString language="SQL">
         <![CDATA[select * from patient where SEX='Man' and AGE='Child']]>
-    </queryString>-->
+    </queryString>
     <field name="AGE" class="java.lang.String">
         <property name="com.jaspersoft.studio.field.name" value="AGE"/>
         <property name="com.jaspersoft.studio.field.label" value="AGE"/>

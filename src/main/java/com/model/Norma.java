@@ -3,12 +3,11 @@ package com.model;
 import javax.persistence.*;
 
 @Entity
-public class Patient {
+@Table(name = "normals")
+public class Norma {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String name;
-    private String surname;
     @Enumerated(EnumType.STRING)
     private Age age;
     @Enumerated(EnumType.STRING)
@@ -18,20 +17,12 @@ public class Patient {
     private double leukocytes;
     private int hemoglobin;
 
-    public String getName() {
-        return name;
+    public Sex getSex() {
+        return sex;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setSex(Sex sex) {
+        this.sex = sex;
     }
 
     public long getId() {
@@ -48,14 +39,6 @@ public class Patient {
 
     public void setAge(Age age) {
         this.age = age;
-    }
-
-    public Sex getSex() {
-        return sex;
-    }
-
-    public void setSex(Sex sex) {
-        this.sex = sex;
     }
 
     public double getErythrocytes() {
@@ -90,4 +73,3 @@ public class Patient {
         this.hemoglobin = hemoglobin;
     }
 }
-
