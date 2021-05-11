@@ -1,6 +1,8 @@
 package com.service;
 
+import com.model.Age;
 import com.model.Patient;
+import com.model.Sex;
 import com.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,13 +17,13 @@ public class PatientService {
     {
         return patientRepository.findAll();
     }
-    public List<Patient> findAllBySex(String sex)
+    public List<Patient> findAllBySex(Sex sex)
     {
         return patientRepository.findAllBySex(sex);
     }
-    public List<Patient> findAllByAge(String age)
+    public List<Patient> findAllByAge(Age age)
     {
-        return patientRepository.findAllBySex(age);
+        return patientRepository.findAllByAge(age);
     }
    /* public List<Patient> findAllByAgeAndSex(String age, String sex)
     {

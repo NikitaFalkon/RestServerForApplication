@@ -58,11 +58,19 @@
     <background>
         <band splitType="Stretch"/>
     </background>
+    <title>
+        <band height="70" splitType="Stretch">
+            <textField>
+                <reportElement x="210" y="22" width="80" height="30" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
+                <textFieldExpression><![CDATA[""]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
     <summary>
         <band height="701"  splitType="Stretch">
             <barChart>
                 <chart evaluationTime="Report">
-                    <reportElement x="1" y="1" width="500" height="700" uuid="949dd096-b461-4a8c-af1a-ae6aedf8028e"/>
+                    <reportElement x="1" y="80" width="500" height="700" uuid="949dd096-b461-4a8c-af1a-ae6aedf8028e"/>
                     <chartTitle/>
                     <chartSubtitle/>
                     <chartLegend/>
@@ -93,7 +101,7 @@
             </barChart>
             <barChart>
                 <chart evaluationTime="Report">
-                    <reportElement x="510" y="1" width="500" height="700" uuid="949dd096-b461-4a8c-af1a-ae6aedf8028e"/>
+                    <reportElement  x="510" y="1" width="500" height="700" uuid="949dd096-b461-4a8c-af1a-ae6aedf8028e"/>
                     <chartTitle/>
                     <chartSubtitle/>
                     <chartLegend/>

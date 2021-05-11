@@ -1,6 +1,8 @@
 package com.service;
 
+import com.model.Analys;
 import com.model.Patient;
+import com.repository.AnalysisRepository;
 import com.repository.PatientRepository;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
@@ -18,19 +20,13 @@ import java.util.Map;
 public class ReportService {
     @Autowired
     PatientRepository patientRepository;
+    @Autowired
+    AnalysisRepository analysisRepository;
     public void exportReport(String reportFormat) throws FileNotFoundException, JRException {
-        List<Patient> patientList = patientRepository.findAll();
-       /* if(age.isEmpty())
-        {
-            patientList = patientRepository.findAllBySex(age);
-        }
-        else
-        {
-            patientList = patientRepository.findAllByAge(sex);
-        }*/
-        File file = ResourceUtils.getFile("classpath:diagram.jrxml");
+        List<Analys> analyses = analysisRepository.findAll();
+        File file = ResourceUtils.getFile("classpath:Analysis.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
-        JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(patientList);
+        JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(analyses);
         Map<String, Object> map = new HashMap<>();
         map.put("My Name", "is Nikita");
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, map, dataSource);

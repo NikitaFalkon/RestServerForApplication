@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="05cc2493-fbc3-49a6-8718-b035382bef67">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+    <queryString language="SQL">
+        <![CDATA[select * from analysis]]>
+    </queryString>
+    <field name="NAME" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="NAME"/>
+        <property name="com.jaspersoft.studio.field.label" value="NAME"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="ANALYSIS"/>
+        <fieldDescription><![CDATA[name]]></fieldDescription>
+    </field>
+    <field name="MORE" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.name" value="MORE"/>
+        <property name="com.jaspersoft.studio.field.label" value="MORE"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="ANALYSIS"/>
+        <fieldDescription><![CDATA[more]]></fieldDescription>
+    </field>
+    <field name="LESS" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.name" value="LESS"/>
+        <property name="com.jaspersoft.studio.field.label" value="LESS"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="ANALYSIS"/>
+        <fieldDescription><![CDATA[less]]></fieldDescription>
+    </field>
+    <field name="NORMAL" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.name" value="NORMAL"/>
+        <property name="com.jaspersoft.studio.field.label" value="NORMAL"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="ANALYSIS"/>
+        <fieldDescription><![CDATA[normal]]></fieldDescription>
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="16" splitType="Stretch">
+            <textField>
+                <reportElement x="183" y="1" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
+                <textFieldExpression><![CDATA["MORE"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="582" y="1" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
+                <textFieldExpression><![CDATA["LESS"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="980" y="1" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
+                <textFieldExpression><![CDATA["NORMAL"]]></textFieldExpression>
+            </textField>
+        </band>
+
+    </title>
+    <summary>
+        <band height="700" splitType="Stretch">
+            <pieChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="1" y="1" width="400" height="400" uuid="4a1c989c-50f2-4860-be61-33d412e44997"/>
+                    <chartTitle/>
+                    <chartSubtitle/>
+                    <chartLegend/>
+                </chart>
+                <pieDataset>
+                    <dataset resetType="Report"/>
+                    <keyExpression><![CDATA[$F{NAME}]]></keyExpression>
+                    <valueExpression><![CDATA[$F{MORE}]]></valueExpression>
+                    <labelExpression><![CDATA[$F{NAME}]]></labelExpression>
+                </pieDataset>
+                <piePlot>
+                    <plot/>
+                    <itemLabel/>
+                </piePlot>
+            </pieChart>
+                <pieChart>
+                    <chart evaluationTime="Report">
+                        <reportElement x="401" y="1" width="400" height="400" uuid="4a1c989c-50f2-4860-be61-33d412e44997"/>
+                        <chartTitle/>
+                        <chartSubtitle/>
+                        <chartLegend/>
+                    </chart>
+                    <pieDataset>
+                        <dataset resetType="Report"/>
+                        <keyExpression><![CDATA[$F{NAME}]]></keyExpression>
+                        <valueExpression><![CDATA[$F{LESS}]]></valueExpression>
+                        <labelExpression><![CDATA[$F{NAME}]]></labelExpression>
+                    </pieDataset>
+                    <piePlot>
+                        <plot/>
+                        <itemLabel/>
+                    </piePlot>
+                </pieChart>
+            <pieChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="802" y="1" width="400" height="400" uuid="4a1c989c-50f2-4860-be61-33d412e44997"/>
+                    <chartTitle/>
+                    <chartSubtitle/>
+                    <chartLegend/>
+                </chart>
+                <pieDataset>
+                    <dataset resetType="Report"/>
+                    <keyExpression><![CDATA[$F{NAME}]]></keyExpression>
+                    <valueExpression><![CDATA[$F{NORMAL}]]></valueExpression>
+                    <labelExpression><![CDATA[$F{NAME}]]></labelExpression>
+                </pieDataset>
+                <piePlot>
+                    <plot/>
+                    <itemLabel/>
+                </piePlot>
+            </pieChart>
+            </band>
+    </summary>
+
+</jasperReport>
