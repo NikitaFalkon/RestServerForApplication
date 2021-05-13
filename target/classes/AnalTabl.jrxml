@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Leaf_Green" pageWidth="795" pageHeight="1042" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7eebaa4-068b-407f-bf7a-d4c2e72a1292">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+    <style name="Title" fontName="Arial" fontSize="26" isBold="true"/>
+    <style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+    <style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+    <style name="Detail" fontName="Arial" fontSize="12"/>
+    <field name="id" class="java.lang.Long"/>
+    <field name="name" class="java.lang.String"/>
+    <field name="more" class="java.lang.Double"/>
+    <field name="normal" class="java.lang.Double"/>
+    <field name="less" class="java.lang.Double"/>
+    <field name="healthy" class="java.lang.Double"/>
+    <field name="sick" class="java.lang.Double"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="49" splitType="Stretch">
+            <staticText>
+                <reportElement style="Title" x="0" y="13" width="263" height="33" uuid="3eb8e1ab-7e38-4368-89db-62b6501a8c67"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Analysis]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="46" splitType="Stretch">
+            <line>
+                <reportElement positionType="FixRelativeToBottom" x="0" y="35" width="720" height="1" uuid="d69c6691-e92e-45c5-bf2d-c1dc15dabb91"/>
+                <graphicElement>
+                    <pen lineWidth="0.5" lineColor="#999999"/>
+                </graphicElement>
+            </line>
+            <staticText>
+                <reportElement style="Column header" x="0" y="19" width="90" height="15" uuid="3dbd0d31-2fdb-469b-8575-ad60fd0bc4d2">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b9719add-7616-4ddd-af1f-557c7056dc2b"/>
+                </reportElement>
+                <text><![CDATA[AGE]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="90" y="19" width="90" height="15" uuid="dd72ecee-2fae-4949-9616-bd6944c51cc1">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3d13a35-bc9a-47a0-a642-f9e8a2978a70"/>
+                </reportElement>
+                <text><![CDATA[MORE]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="180" y="19" width="90" height="15" uuid="f4984603-0560-47c7-a754-2f2e362076ce">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d8dda882-b405-4fd7-b214-ea51858db438"/>
+                </reportElement>
+                <text><![CDATA[NORMAL]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="270" y="19" width="90" height="15" uuid="31ee7985-ab27-49d4-bbc8-936dad18a3b4">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ac839585-b22f-47f4-8e98-bf869924fff8"/>
+                </reportElement>
+                <text><![CDATA[LESS]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="360" y="19" width="90" height="15" uuid="d3ed2f2d-60a8-4ac2-b097-001362bcc3ef">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f2dbc559-116c-4750-87ca-9e48803f2e71"/>
+                </reportElement>
+                <text><![CDATA[HEALTHY]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="450" y="19" width="90" height="15" uuid="be89a1ab-c55f-497b-b830-0c25ca3f8cd5">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8d24bb8c-ac05-4ec7-8452-7f67acc163b8"/>
+                </reportElement>
+                <text><![CDATA[SICK]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="540" y="19" width="90" height="15" uuid="c52c1b05-4412-4c5a-a4b1-83cba0d06742">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a2dfd906-ebf3-46fc-a7fa-2ed378eb6c8f"/>
+                </reportElement>
+                <text><![CDATA[HPATIENTS]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="630" y="19" width="90" height="15" uuid="c52c1b05-4412-4c5a-a4b1-83cba0d06742">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a2dfd906-ebf3-46fc-a7fa-2ed378eb6c8f"/>
+                </reportElement>
+                <text><![CDATA[SPATIENTS]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="16" splitType="Stretch">
+            <line>
+                <reportElement positionType="FixRelativeToBottom" x="0" y="15" width="720" height="1" uuid="f367c019-9cb7-431c-8713-5a96f9b889aa"/>
+                <graphicElement>
+                    <pen lineWidth="0.5" lineColor="#999999"/>
+                </graphicElement>
+            </line>
+
+            <textField>
+                <reportElement style="Detail" x="0" y="0" width="90" height="15" uuid="0d6e48ff-5c7d-45f7-8d5c-0a0d1f2b8a38">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3d13a35-bc9a-47a0-a642-f9e8a2978a70"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="Detail" x="90" y="0" width="90" height="15" uuid="f747bed4-7286-4227-94cd-2883c8551568">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d8dda882-b405-4fd7-b214-ea51858db438"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{more}/($F{more}+$F{normal}+$F{less})]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="Detail" x="180" y="1" width="90" height="15" uuid="c1dd37d1-bd72-427a-a300-4c5deaf9510f">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ac839585-b22f-47f4-8e98-bf869924fff8"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{normal}/($F{more}+$F{normal}+$F{less})]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement style="Detail" x="270" y="1" width="90" height="15" uuid="09cc3e44-ce47-40d1-b015-4d48e27c0c34">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f2dbc559-116c-4750-87ca-9e48803f2e71"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{less}/($F{more}+$F{normal}+$F{less})]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="Detail" x="360" y="1" width="90" height="15" uuid="6c2fc975-de7c-42f9-aba0-75a5fdb7c18c">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8d24bb8c-ac05-4ec7-8452-7f67acc163b8"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{healthy}/($F{sick}+$F{healthy})]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="Detail" x="450" y="1" width="90" height="15" uuid="1b7afffb-df2b-4c57-ac0f-bc74686a235b">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a2dfd906-ebf3-46fc-a7fa-2ed378eb6c8f"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{sick}/($F{sick}+$F{healthy})]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="Detail" x="540" y="1" width="90" height="15" uuid="6c2fc975-de7c-42f9-aba0-75a5fdb7c18c">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8d24bb8c-ac05-4ec7-8452-7f67acc163b8"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{healthy}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="Detail" x="630" y="1" width="90" height="15" uuid="6c2fc975-de7c-42f9-aba0-75a5fdb7c18c">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8d24bb8c-ac05-4ec7-8452-7f67acc163b8"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{sick}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="9" splitType="Stretch">
+            <line>
+                <reportElement positionType="FixRelativeToBottom" x="0" y="3" width="720" height="1" uuid="02519f40-8679-4e40-a1f1-699bc025a206"/>
+                <graphicElement>
+                    <pen lineWidth="0.5" lineColor="#999999"/>
+                </graphicElement>
+            </line>
+        </band>
+    </columnFooter>
+    <pageFooter>
+        <band height="792" splitType="Stretch">
+            <textField>
+                <reportElement x="186" y="1" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
+                <textFieldExpression><![CDATA["MORE"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="586" y="1" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
+                <textFieldExpression><![CDATA["LESS"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="186" y="251" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
+                <textFieldExpression><![CDATA["NORMAL"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="586" y="251" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
+                <textFieldExpression><![CDATA["SICK"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="186" y="501" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
+                <textFieldExpression><![CDATA["HEALTHY"]]></textFieldExpression>
+            </textField>
+            <pie3DChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="1" y="1" width="400" height="250" uuid="4a1c989c-50f2-4860-be61-33d412e44997"/>
+                    <chartTitle/>
+                    <chartSubtitle/>
+                    <chartLegend/>
+                </chart>
+                <pieDataset>
+                    <dataset resetType="Report"/>
+                    <keyExpression><![CDATA[$F{name}]]></keyExpression>
+                    <valueExpression><![CDATA[$F{more}/($F{more}+$F{normal}+$F{less})]]></valueExpression>
+                    <labelExpression><![CDATA[$F{name}]]></labelExpression>
+                </pieDataset>
+                <pie3DPlot>
+                    <plot/>
+                    <itemLabel/>
+                </pie3DPlot>
+            </pie3DChart>
+            <pie3DChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="402" y="1" width="400" height="250" uuid="4a1c989c-50f2-4860-be61-33d412e44997"/>
+                    <chartTitle/>
+                    <chartSubtitle/>
+                    <chartLegend/>
+                </chart>
+                <pieDataset>
+                    <dataset resetType="Report"/>
+                    <keyExpression><![CDATA[$F{name}]]></keyExpression>
+                    <valueExpression><![CDATA[$F{less}/($F{more}+$F{normal}+$F{less})]]></valueExpression>
+                    <labelExpression><![CDATA[$F{name}]]></labelExpression>
+                </pieDataset>
+                <pie3DPlot>
+                    <plot/>
+                    <itemLabel/>
+                </pie3DPlot>
+            </pie3DChart>
+            <pie3DChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="1" y="252" width="400" height="250" uuid="4a1c989c-50f2-4860-be61-33d412e44997"/>
+                    <chartTitle/>
+                    <chartSubtitle/>
+                    <chartLegend/>
+                </chart>
+                <pieDataset>
+                    <dataset resetType="Report"/>
+                    <keyExpression><![CDATA[$F{name}]]></keyExpression>
+                    <valueExpression><![CDATA[$F{normal}/($F{more}+$F{normal}+$F{less})]]></valueExpression>
+                    <labelExpression><![CDATA[$F{name}]]></labelExpression>
+                </pieDataset>
+                <pie3DPlot>
+                    <plot/>
+                    <itemLabel/>
+                </pie3DPlot>
+            </pie3DChart>
+            <pie3DChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="402" y="252" width="400" height="250" uuid="4a1c989c-50f2-4860-be61-33d412e44997"/>
+                    <chartTitle/>
+                    <chartSubtitle/>
+                    <chartLegend/>
+                </chart>
+                <pieDataset>
+                    <dataset resetType="Report"/>
+                    <keyExpression><![CDATA[$F{name}]]></keyExpression>
+                    <valueExpression><![CDATA[$F{sick}/($F{sick}+$F{healthy})]]></valueExpression>
+                    <labelExpression><![CDATA[$F{name}]]></labelExpression>
+                </pieDataset>
+                <pie3DPlot>
+                    <plot/>
+                    <itemLabel/>
+                </pie3DPlot>
+            </pie3DChart>
+            <pie3DChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="1" y="502" width="400" height="250" uuid="4a1c989c-50f2-4860-be61-33d412e44997"/>
+                    <chartTitle/>
+                    <chartSubtitle/>
+                    <chartLegend/>
+                </chart>
+                <pieDataset>
+                    <dataset resetType="Report"/>
+                    <keyExpression><![CDATA[$F{name}]]></keyExpression>
+                    <valueExpression><![CDATA[$F{healthy}/($F{sick}+$F{healthy})]]></valueExpression>
+                    <labelExpression><![CDATA[$F{name}]]></labelExpression>
+                </pieDataset>
+                <pie3DPlot>
+                    <plot/>
+                    <itemLabel/>
+                </pie3DPlot>
+            </pie3DChart>
+        </band>
+    </pageFooter>
+    <summary>
+        <band splitType="Stretch"/>
+    </summary>
+</jasperReport>

@@ -32,14 +32,13 @@ public class MyController {
     public RedirectView GenerateReport(@PathVariable String format) throws FileNotFoundException, JRException {
         return reportService.exportReport(format);
     }*/
-    @GetMapping(value = "report", produces = { MediaType.TEXT_HTML_VALUE })
-    public byte[] getPDF(
-                         /*@PathVariable String format
-                         @RequestParam(name = "sex", required = false) String sex,
+    @GetMapping(value = "/report", produces = { MediaType.APPLICATION_PDF_VALUE})
+    public byte[] getHTML(@RequestParam(name = "format", required = false) String format
+                         /*@RequestParam(name = "sex", required = false) String sex,
                          @RequestParam(name = "age", required = false) String age*/
     ) throws IOException, JRException {
-        reportService.exportReport("html");
-        return Files.readAllBytes(new File("C:/FilesForJava/patients.html").toPath());
+        reportService.exportReport(format);
+        return Files.readAllBytes(new File("patients.pdf").toPath());
     }
 
     public static void main(String[] args) {

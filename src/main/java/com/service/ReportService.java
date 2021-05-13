@@ -24,17 +24,28 @@ public class ReportService {
     AnalysisRepository analysisRepository;
     public void exportReport(String reportFormat) throws FileNotFoundException, JRException {
         List<Analys> analyses = analysisRepository.findAll();
-        File file = ResourceUtils.getFile("classpath:Analysis.jrxml");
+        /*analyses.forEach(analys -> {analys.ForGraph();
+            System.out.println(analys);});*/
+        File file = null;
+        if(reportFormat.equals("table"))
+        {
+            file = ResourceUtils.getFile("classpath:AnalTabl.jrxml");
+        }
+        else
+        {
+            file = ResourceUtils.getFile("classpath:Analysis.jrxml");
+        }
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
         JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(analyses);
         Map<String, Object> map = new HashMap<>();
         map.put("My Name", "is Nikita");
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, map, dataSource);
-        if (reportFormat.equalsIgnoreCase("html")) {
-            JasperExportManager.exportReportToHtmlFile(jasperPrint, "C:\\FilesForJava" + "\\patients.html");
-        }
-        if (reportFormat.equalsIgnoreCase("pdf")) {
-            JasperExportManager.exportReportToHtmlFile(jasperPrint, "C:\\FilesForJava" + "\\patients.pdf");
-        }
+//        if (reportFormat.equalsIgnoreCase("html")) {
+            //JasperExportManager.exportReportToHtmlFile(jasperPrint, "C:\\FilesForJava" + "\\patients.pdf");
+        JasperExportManager.exportReportToPdfFile(jasperPrint, "patients.pdf");
+//        }
+  /*      if (reportFormat.equalsIgnoreCase("jpg")) {
+            JasperExportManager.exportReportToHtmlFile(jasperPrint, "C:\\FilesForJava" + "\\patients.jpg");
+        }*/
     }
 }

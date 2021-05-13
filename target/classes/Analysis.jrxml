@@ -12,23 +12,35 @@
         <property name="com.jaspersoft.studio.field.tree.path" value="ANALYSIS"/>
         <fieldDescription><![CDATA[name]]></fieldDescription>
     </field>
-    <field name="MORE" class="java.lang.Integer">
+    <field name="MORE" class="java.lang.Double">
         <property name="com.jaspersoft.studio.field.name" value="MORE"/>
         <property name="com.jaspersoft.studio.field.label" value="MORE"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="ANALYSIS"/>
         <fieldDescription><![CDATA[more]]></fieldDescription>
     </field>
-    <field name="LESS" class="java.lang.Integer">
+    <field name="LESS" class="java.lang.Double">
         <property name="com.jaspersoft.studio.field.name" value="LESS"/>
         <property name="com.jaspersoft.studio.field.label" value="LESS"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="ANALYSIS"/>
         <fieldDescription><![CDATA[less]]></fieldDescription>
     </field>
-    <field name="NORMAL" class="java.lang.Integer">
+    <field name="NORMAL" class="java.lang.Double">
         <property name="com.jaspersoft.studio.field.name" value="NORMAL"/>
         <property name="com.jaspersoft.studio.field.label" value="NORMAL"/>
         <property name="com.jaspersoft.studio.field.tree.path" value="ANALYSIS"/>
         <fieldDescription><![CDATA[normal]]></fieldDescription>
+    </field>
+    <field name="HEALTHY" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="HEALTHY"/>
+        <property name="com.jaspersoft.studio.field.label" value="HEALTHY"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="ANALYSIS"/>
+        <fieldDescription><![CDATA[healthy]]></fieldDescription>
+    </field>
+    <field name="SICK" class="java.lang.Double">
+        <property name="com.jaspersoft.studio.field.name" value="SICK"/>
+        <property name="com.jaspersoft.studio.field.label" value="SICK"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="ANALYSIS"/>
+        <fieldDescription><![CDATA[sick]]></fieldDescription>
     </field>
     <background>
         <band splitType="Stretch"/>
@@ -36,22 +48,30 @@
     <title>
         <band height="16" splitType="Stretch">
             <textField>
-                <reportElement x="183" y="1" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
+                <reportElement x="184" y="1" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
                 <textFieldExpression><![CDATA["MORE"]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="582" y="1" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
+                <reportElement x="584" y="1" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
                 <textFieldExpression><![CDATA["LESS"]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="980" y="1" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
+                <reportElement x="981" y="1" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
                 <textFieldExpression><![CDATA["NORMAL"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="1381" y="1" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
+                <textFieldExpression><![CDATA["SICK"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="1781" y="1" width="80" height="15" uuid="e033c131-736e-45af-ae33-97b72a6522df"/>
+                <textFieldExpression><![CDATA["HEALTHY"]]></textFieldExpression>
             </textField>
         </band>
 
     </title>
     <summary>
-        <band height="700" splitType="Stretch">
+        <band height="450" splitType="Stretch">
             <pieChart>
                 <chart evaluationTime="Report">
                     <reportElement x="1" y="1" width="400" height="400" uuid="4a1c989c-50f2-4860-be61-33d412e44997"/>
@@ -106,7 +126,42 @@
                     <itemLabel/>
                 </piePlot>
             </pieChart>
+            <pieChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="1204" y="1" width="400" height="400" uuid="4a1c989c-50f2-4860-be61-33d412e44997"/>
+                    <chartTitle/>
+                    <chartSubtitle/>
+                    <chartLegend/>
+                </chart>
+                <pieDataset>
+                    <dataset resetType="Report"/>
+                    <keyExpression><![CDATA[$F{NAME}]]></keyExpression>
+                    <valueExpression><![CDATA[$F{SICK}]]></valueExpression>
+                    <labelExpression><![CDATA[$F{NAME}]]></labelExpression>
+                </pieDataset>
+                <piePlot>
+                    <plot/>
+                    <itemLabel/>
+                </piePlot>
+            </pieChart>
+            <pieChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="1606" y="1" width="400" height="400" uuid="4a1c989c-50f2-4860-be61-33d412e44997"/>
+                    <chartTitle/>
+                    <chartSubtitle/>
+                    <chartLegend/>
+                </chart>
+                <pieDataset>
+                    <dataset resetType="Report"/>
+                    <keyExpression><![CDATA[$F{NAME}]]></keyExpression>
+                    <valueExpression><![CDATA[$F{HEALTHY}]]></valueExpression>
+                    <labelExpression><![CDATA[$F{NAME}]]></labelExpression>
+                </pieDataset>
+                <piePlot>
+                    <plot/>
+                    <itemLabel/>
+                </piePlot>
+            </pieChart>
             </band>
     </summary>
-
 </jasperReport>

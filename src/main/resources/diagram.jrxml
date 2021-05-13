@@ -129,6 +129,45 @@
                     </valueAxisFormat>
                 </barPlot>
             </barChart>
+            <frame>
+                <reportElement mode="Opaque" x="97" y="5" width="705" height="20" backcolor="#666666" uuid="35d90a9b-bb7e-4ec4-bfa2-68be1967d6b2"/>
+                <staticText>
+                    <reportElement style="Column header" x="0" y="0" width="78" height="15" uuid="d919d854-589e-4e18-b72d-d09f7bd566f6">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4f9860ca-cdda-4972-aff0-431aa67e179b"/>
+                    </reportElement>
+                    <text><![CDATA[NAME]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement style="Column header" x="78" y="0" width="78" height="15" uuid="f7fe4c79-ba7c-4400-baca-91fec990bf07">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7bd66644-1074-45c7-9047-fdd3aabebf47"/>
+                    </reportElement>
+                    <text><![CDATA[Name]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement style="Column header" x="156" y="0" width="78" height="15" uuid="ad6fcaf9-8315-471c-a4d0-3a0b3e548ef3">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5a692f2c-f796-49e8-b228-ac1d2bdd8cc3"/>
+                    </reportElement>
+                    <text><![CDATA[Surname]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement style="Column header" x="234" y="0" width="78" height="15" uuid="7547d67f-c00f-4155-97e1-7300969928d9">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="39885b80-74a8-4620-9aac-3f71db4316bc"/>
+                    </reportElement>
+                    <text><![CDATA[Sex]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement style="Column header" x="312" y="0" width="78" height="15" uuid="cb7f654f-b257-4e5a-957f-c424788d7177">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="667b01e0-8eff-4453-b756-d4eabba5b20d"/>
+                    </reportElement>
+                    <text><![CDATA[Age]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement style="Column header" x="390" y="0" width="78" height="15" uuid="39e96a77-6cba-433d-ba9b-aed640951e44">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c728311b-1c0f-40cb-8848-461089136bc4"/>
+                    </reportElement>
+                    <text><![CDATA[Erythrocytes]]></text>
+                </staticText>
+            </frame>
         </band>
     </summary>
 
