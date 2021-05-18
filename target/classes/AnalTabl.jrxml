@@ -47,43 +47,43 @@
                 <reportElement style="Column header" x="90" y="19" width="90" height="15" uuid="dd72ecee-2fae-4949-9616-bd6944c51cc1">
                     <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3d13a35-bc9a-47a0-a642-f9e8a2978a70"/>
                 </reportElement>
-                <text><![CDATA[MORE]]></text>
+                <text><![CDATA[MORE(%)]]></text>
             </staticText>
             <staticText>
                 <reportElement style="Column header" x="180" y="19" width="90" height="15" uuid="f4984603-0560-47c7-a754-2f2e362076ce">
                     <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d8dda882-b405-4fd7-b214-ea51858db438"/>
                 </reportElement>
-                <text><![CDATA[NORMAL]]></text>
+                <text><![CDATA[NORMAL(%)]]></text>
             </staticText>
             <staticText>
                 <reportElement style="Column header" x="270" y="19" width="90" height="15" uuid="31ee7985-ab27-49d4-bbc8-936dad18a3b4">
                     <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ac839585-b22f-47f4-8e98-bf869924fff8"/>
                 </reportElement>
-                <text><![CDATA[LESS]]></text>
+                <text><![CDATA[LESS(%)]]></text>
             </staticText>
             <staticText>
                 <reportElement style="Column header" x="360" y="19" width="90" height="15" uuid="d3ed2f2d-60a8-4ac2-b097-001362bcc3ef">
                     <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f2dbc559-116c-4750-87ca-9e48803f2e71"/>
                 </reportElement>
-                <text><![CDATA[HEALTHY]]></text>
+                <text><![CDATA[HEALTHY(%)]]></text>
             </staticText>
             <staticText>
                 <reportElement style="Column header" x="450" y="19" width="90" height="15" uuid="be89a1ab-c55f-497b-b830-0c25ca3f8cd5">
                     <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8d24bb8c-ac05-4ec7-8452-7f67acc163b8"/>
                 </reportElement>
-                <text><![CDATA[SICK]]></text>
+                <text><![CDATA[SICK(%)]]></text>
             </staticText>
             <staticText>
                 <reportElement style="Column header" x="540" y="19" width="90" height="15" uuid="c52c1b05-4412-4c5a-a4b1-83cba0d06742">
                     <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a2dfd906-ebf3-46fc-a7fa-2ed378eb6c8f"/>
                 </reportElement>
-                <text><![CDATA[HPATIENTS]]></text>
+                <text><![CDATA[HEALTHY(p)]]></text>
             </staticText>
             <staticText>
                 <reportElement style="Column header" x="630" y="19" width="90" height="15" uuid="c52c1b05-4412-4c5a-a4b1-83cba0d06742">
                     <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a2dfd906-ebf3-46fc-a7fa-2ed378eb6c8f"/>
                 </reportElement>
-                <text><![CDATA[SPATIENTS]]></text>
+                <text><![CDATA[SICK(p)]]></text>
             </staticText>
         </band>
     </columnHeader>
